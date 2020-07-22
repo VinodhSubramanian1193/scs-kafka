@@ -18,35 +18,35 @@ import java.util.Map;
 @Slf4j
 public class SpringCloudStreamConfiguration {
 
-    @Bean
-    public KafkaBinderConfigurationProperties getKafka1BinderProps(){
-        KafkaBinderConfigurationProperties kafkaBinderConfigurationProperties
-                = new KafkaBinderConfigurationProperties(new KafkaProperties());
-
-        String brokers = "localhost:9095";
-        kafkaBinderConfigurationProperties.setBrokers(brokers);
-        kafkaBinderConfigurationProperties.setDefaultBrokerPort("9095");
-        Map<String, String> configuration = new HashMap<>();
-        configuration.put("auto.offset.reset", "latest");
-        kafkaBinderConfigurationProperties.setConfiguration(configuration);
-
-        return kafkaBinderConfigurationProperties;
-    }
-
-    @Bean
-    public KafkaBinderConfigurationProperties getKafka2BinderProps(){
-        KafkaBinderConfigurationProperties kafkaBinderConfigurationProperties
-                = new KafkaBinderConfigurationProperties(new KafkaProperties());
-
-        String brokers = "localhost:9096";
-        kafkaBinderConfigurationProperties.setBrokers(brokers);
-        kafkaBinderConfigurationProperties.setDefaultBrokerPort("9096");
-        Map<String, String> configuration = new HashMap<>();
-        configuration.put("auto.offset.reset", "latest");
-        kafkaBinderConfigurationProperties.setConfiguration(configuration);
-
-        return kafkaBinderConfigurationProperties;
-    }
+//    @Bean
+//    public KafkaBinderConfigurationProperties getKafka1BinderProps(){
+//        KafkaBinderConfigurationProperties kafkaBinderConfigurationProperties
+//                = new KafkaBinderConfigurationProperties(new KafkaProperties());
+//
+//        String brokers = "localhost:9095";
+//        kafkaBinderConfigurationProperties.setBrokers(brokers);
+//        kafkaBinderConfigurationProperties.setDefaultBrokerPort("9095");
+//        Map<String, String> configuration = new HashMap<>();
+//        configuration.put("auto.offset.reset", "latest");
+//        kafkaBinderConfigurationProperties.setConfiguration(configuration);
+//
+//        return kafkaBinderConfigurationProperties;
+//    }
+//
+//    @Bean
+//    public KafkaBinderConfigurationProperties getKafka2BinderProps(){
+//        KafkaBinderConfigurationProperties kafkaBinderConfigurationProperties
+//                = new KafkaBinderConfigurationProperties(new KafkaProperties());
+//
+//        String brokers = "localhost:9096";
+//        kafkaBinderConfigurationProperties.setBrokers(brokers);
+//        kafkaBinderConfigurationProperties.setDefaultBrokerPort("9096");
+//        Map<String, String> configuration = new HashMap<>();
+//        configuration.put("auto.offset.reset", "latest");
+//        kafkaBinderConfigurationProperties.setConfiguration(configuration);
+//
+//        return kafkaBinderConfigurationProperties;
+//    }
 
     @Primary
     @Bean
