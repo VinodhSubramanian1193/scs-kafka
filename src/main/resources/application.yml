@@ -1,0 +1,21 @@
+spring:
+  cloud:
+    stream:
+      defaultBinder: kafka1
+      binders:
+        kafka1:
+          type: kafka
+          environment:
+            spring.cloud.stream.kafka.binder:
+              brokers: localhost:9095
+              autoCreateTopics: true
+              configuration:
+                auto.offset.reset: latest
+        kafka2:
+          type: kafka
+          environment:
+            spring.cloud.stream.kafka.binder:
+              brokers: localhost:9096
+              autoCreateTopics: true
+              configuration:
+                auto.offset.reset: latest
